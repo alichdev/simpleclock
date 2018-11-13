@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void configure() {
-//        getFragmentManager().beginTransaction()
-//                .add(R.id.main_frame ,stopWatchFrag)
+//        getSupportFragmentManager().beginTransaction()
+//                .replace(R.id.main_frame ,stopWatchFrag)
 //                .commit();
 
 
@@ -37,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.main_frame ,stopWatchFrag)
+                        .commit();
 //
             }
         });
@@ -44,7 +47,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.main_frame ,countDownFrag)
+                        .commit();
+
             }
         });
 
